@@ -17,9 +17,9 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "prebuild": "rm -rf dist && mkdir dist",
-    "browserify-browser": "browserify -r DataFrame,immutable -s DataFrame lib/index.js -o dist/browser.js -t [ babelify --presets [ es2015 ] ]",
-    "browserify-commonjs": "babel lib -d dist --presets es2015",
+    "prebuild": "rm -rf build && mkdir build",
+    "browserify-browser": "browserify -r immutable -s DataFrame lib/index.js -o build/browser.js -t [ babelify --presets [ es2015 ] ]",
+    "browserify-commonjs": "babel lib -d build --presets es2015",
     "browserify": "npm run browserify-commonjs && npm run browserify-browser",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
